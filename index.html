@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+</head>
+<body>
+  <div>
+    <form onsubmit="calAge(); return false;">
+      <label for="birth">Enter BirthYear:</label><br><br>
+      <input type="text" name="birth" id="birth" placeholder="Enter the birth Year" /><br><br>
+      <button type="submit">Calulate Age</button>
+    </form>
+  </div>
+  <div>
+    <p id="result"></p>
+  </div>
+  <script>
+    function calAge()
+    {
+       const birthDate= document.getElementById('birth').value;
+       const age = 2025 - birthDate;
+       document.getElementById('result').textContent=`Your age is ${age}`;
+    }
+  </script>
+</body>
+</html>
